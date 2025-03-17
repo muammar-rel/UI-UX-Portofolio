@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ganti nomor WhatsApp Anda (format: kode negara tanpa + atau 0 di depan)
     // Contoh untuk Indonesia: 62812345678
-    const waNumber = "628XXXXXXXX"; // Ganti dengan nomor WA Anda
+    const waNumber = "6282296764765"; // Ganti dengan nomor WA Anda
 
     // Buat URL WhatsApp
     const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
