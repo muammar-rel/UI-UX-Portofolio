@@ -58,3 +58,44 @@ const typed = new Typed(".multiple-text", {
   typeDelay: 1000,
   loop: true,
 });
+
+// kirim pesan email
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.querySelector("#contact form");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = contactForm.querySelector(
+      'input[placeholder="Full Name"]'
+    ).value;
+    const email = contactForm.querySelector(
+      'input[placeholder="Email Address"]'
+    ).value;
+    const phone = contactForm.querySelector(
+      'input[placeholder="Mobile Number"]'
+    ).value;
+    const subject = contactForm.querySelector(
+      'input[placeholder="Email Subject"]'
+    ).value;
+    const message = contactForm.querySelector(
+      'textarea[placeholder="Tulis Pesanmu!"]'
+    ).value;
+
+    // Menggunakan mailto link untuk membuka aplikasi email default
+    const mailtoLink = `mailto:emailanda@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      "Nama: " +
+        name +
+        "\nEmail: " +
+        email +
+        "\nTelepon: " +
+        phone +
+        "\n\nPesan:\n" +
+        message
+    )}`;
+
+    window.location.href = mailtoLink;
+  });
+});
