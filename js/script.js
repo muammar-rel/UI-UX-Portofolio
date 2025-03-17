@@ -59,7 +59,7 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-// kirim pesan email
+// kirim pesan
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.querySelector("#contact form");
 
@@ -82,20 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
       'textarea[placeholder="Tulis Pesanmu!"]'
     ).value;
 
-    // Menggunakan mailto link untuk membuka aplikasi email default
-    const mailtoLink = `mailto:emailanda@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(
-      "Nama: " +
-        name +
-        "\nEmail: " +
-        email +
-        "\nTelepon: " +
-        phone +
-        "\n\nPesan:\n" +
-        message
-    )}`;
+    // Format pesan untuk WhatsApp
+    const waMessage = `Nama: ${name}%0AEmail: ${email}%0ATelepon: ${phone}%0ASubjek: ${subject}%0A%0APesan:%0A${message}`;
 
-    window.location.href = mailtoLink;
+    // Ganti nomor WhatsApp Anda (format: kode negara tanpa + atau 0 di depan)
+    // Contoh untuk Indonesia: 62812345678
+    const waNumber = "628XXXXXXXX"; // Ganti dengan nomor WA Anda
+
+    // Buat URL WhatsApp
+    const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
+
+    // Buka WhatsApp di tab baru
+    window.open(waURL, "_blank");
   });
 });
