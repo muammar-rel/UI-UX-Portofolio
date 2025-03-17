@@ -85,11 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Format pesan untuk WhatsApp
     const waMessage = `Nama: ${name}%0AEmail: ${email}%0ATelepon: ${phone}%0ASubjek: ${subject}%0A%0APesan:%0A${message}`;
 
-    // Ganti nomor WhatsApp Anda (format: kode negara tanpa + atau 0 di depan)
-    // Contoh untuk Indonesia: 62812345678
     const waNumber = "6282296764765"; // Ganti dengan nomor WA Anda
-
-    // Buat URL WhatsApp
     const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
 
     // Buka WhatsApp di tab baru
