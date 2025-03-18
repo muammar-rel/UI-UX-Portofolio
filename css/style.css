@@ -543,17 +543,17 @@ span {
     margin-bottom: 3rem;
   }
   .portofolio h2,
-  .portofolio h2 {
+  .blog h2 {
     margin-bottom: 3rem;
   }
   .portofolio-container,
-  .portofolio-container {
+  .blog-container {
     grid-template-columns: 2, 1fr;
   }
 }
 @media (max-width: 617px) {
   .portofolio-container,
-  .portofolio-container {
+  .blog-container {
     grid-template-columns: 1fr;
   }
 }
