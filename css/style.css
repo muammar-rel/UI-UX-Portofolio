@@ -272,16 +272,19 @@ span {
 .portofolio {
   background: var(--second-bg-color);
 }
-.portofolio h2 {
+.portofolio h2,
+.blog h2 {
   margin-bottom: 4rem;
 }
-.portofolio-container {
+.portofolio-container,
+.blog-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2.5rem;
 }
-.portofolio-container .portofolio-box {
+.portofolio-container .portofolio-box,
+.blog-container .blog-box {
   position: relative;
   border-radius: 2rem;
   box-shadow: 0 0 1rem var(--bg-color);
@@ -292,7 +295,8 @@ span {
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
 }
-.portofolio-box img {
+.portofolio-box img,
+.blog-box img {
   width: 100%;
   transition: 0.5s ease;
   -webkit-transition: 0.5s ease;
@@ -300,14 +304,16 @@ span {
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
 }
-.portofolio-box:hover img {
+.portofolio-box:hover img,
+.blog-box:hover img {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-.portofolio-box .portofolio-layer {
+.portofolio-box .portofolio-layer,
+.blog-box .blog-layer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -331,20 +337,24 @@ span {
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
 }
-.portofolio-box:hover .portofolio-layer {
+.portofolio-box:hover .portofolio-layer,
+.blog-box:hover .blog-layer {
   transform: translateY(0);
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
 }
-.portofolio-layer h4 {
+.portofolio-layer h4,
+.blog-layer h4 {
   font-size: 3rem;
 }
+.portofolio-layer p,
 .portofolio-layer p {
   font-size: 1.6rem;
   margin: 0.3rem 0 1rem;
 }
+.portofolio-layer a,
 .portofolio-layer a {
   display: inline-flex;
   justify-content: center;
@@ -358,12 +368,20 @@ span {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.portofolio-layer a i,
 .portofolio-layer a i {
   font-size: 2rem;
   color: var(--second-bg-color);
 }
 
+/* Blog Section */
+.blog {
+  background: var(--bg-color);
+}
 /* contact section */
+.contact {
+  background: var(--second-bg-color);
+}
 .contact h2 {
   margin-bottom: 3rem;
 }
@@ -383,8 +401,8 @@ span {
   width: 100%;
   padding: 1.5rem;
   font-size: 1.6rem;
-  color: var(--text-color);
-  background: var(--second-bg-color);
+  color: #ffffff;
+  background: #4f4f4f;
   border-radius: 0.8rem;
   margin: 0.7rem 0;
   -webkit-border-radius: 0.8rem;
@@ -467,7 +485,8 @@ span {
   .services {
     padding-bottom: 7rem;
   }
-  .portofolio {
+  .portofolio,
+  .blog {
     padding-bottom: 7rem;
   }
   .contact {
@@ -523,14 +542,17 @@ span {
   .services h2 {
     margin-bottom: 3rem;
   }
+  .portofolio h2,
   .portofolio h2 {
     margin-bottom: 3rem;
   }
+  .portofolio-container,
   .portofolio-container {
     grid-template-columns: 2, 1fr;
   }
 }
 @media (max-width: 617px) {
+  .portofolio-container,
   .portofolio-container {
     grid-template-columns: 1fr;
   }
